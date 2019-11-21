@@ -6,22 +6,6 @@ import (
 	"time"
 )
 
-func addition(x, y int) int {
-	return x + y
-}
-
-func swap(x, y string) (string, string) {
-	return y, x
-}
-
-func split(sum int) (x, y int) {
-	var random = rand.Intn(6)
-
-	x = sum * random / 9
-	y = sum - x
-	return
-}
-
 func main() {
 	// Changing the seed will change the way random numbers are generated
 	rand.Seed(time.Now().UTC().UnixNano())
@@ -36,4 +20,20 @@ func main() {
 	a, b := swap("hello", "there")
 	fmt.Println(a, b)
 	fmt.Println(split(25))
+}
+
+func addition(x, y int) int {
+	return x + y
+}
+
+func swap(x, y string) (string, string) {
+	return y, x
+}
+
+func split(sum int) (x, y int) {
+	var random = rand.Intn(6)
+
+	x = sum * random / 9
+	y = sum - x
+	return
 }
