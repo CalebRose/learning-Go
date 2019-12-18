@@ -1,4 +1,4 @@
-package main
+package hello
 
 import (
 	"fmt"
@@ -6,7 +6,8 @@ import (
 	"time"
 )
 
-func main() {
+func ninethousand() {
+
 	// Changing the seed will change the way random numbers are generated
 	rand.Seed(time.Now().UTC().UnixNano())
 	fmt.Println("Hello, World.")
@@ -20,6 +21,10 @@ func main() {
 	a, b := swap("hello", "there")
 	fmt.Println(a, b)
 	fmt.Println(split(25))
+	for i := 0; i < 50000; i++ {
+
+	}
+	fmt.Println("Done!")
 }
 
 func addition(x, y int) int {
@@ -32,7 +37,6 @@ func swap(x, y string) (string, string) {
 
 func split(sum int) (x, y int) {
 	var random = rand.Intn(6)
-
 	x = sum * random / 9
 	y = sum - x
 	return
